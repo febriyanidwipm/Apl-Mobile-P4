@@ -4,9 +4,12 @@ header('Content-Type: application/json');
 
 include('db.php');
 
+var_dump($_POST['id']);
+
 if (!isset($_POST['id'])  && !isset($_POST['title']) && !isset($_POST['content'])) {
   echo json_encode("No Data Sent!");
-} else {
+} 
+else {
   $id = $_POST['id'];
   $title = htmlspecialchars($_POST['title']);
   $content = htmlspecialchars($_POST['content']);
